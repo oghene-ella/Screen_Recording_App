@@ -7,7 +7,7 @@ import videoProfile from "../../assets/landingPage/VideoRepository.svg"
 
 const Features = () => {
     return (
-			<section className="w-full h-fit flex justify-center py-16">
+			<section className="w-full h-fit flex justify-center py-16" id="features">
 				<main className="w-11/12 h-full justify-center flex flex-col items-center gap-16">
 					<span className="flex flex-col gap-2 items-center">
 						<h1 className="font-sora text-4xl font-semibold text-dark_black">
@@ -18,7 +18,7 @@ const Features = () => {
 						</p>
 					</span>
 
-					<section className="w-full flex flex-col flex-col-reverse lg:flex-row items-center gap-20 lg:gap-10">
+					<section className="w-full flex flex-col-reverse  lg:flex-row items-center gap-20 lg:gap-10">
 						<section className="flex flex-col gap-16">
 							{/* simple recording */}
 							<span className="flex gap-5 items-start">

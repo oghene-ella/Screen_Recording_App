@@ -1,4 +1,4 @@
-import headerImg from "../../assets/landingPage/headerImg.svg"
+import headerImg from "../../assets/landingPage/headerImg.jpg"
 import arrowIcon from "../../assets/icons/arrow-right.svg"
 
 const Header = () => {

@@ -14,6 +14,8 @@ export default {
 				line: "#F4F6F8",
 				text: "#616163",
 				sub_header: "#1B233D",
+				login_text: "#434343",
+				border: "#B6B3C6",
 			},
 		},
 	},
