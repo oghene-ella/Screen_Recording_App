@@ -16,6 +16,7 @@ export default {
 				sub_header: "#1B233D",
 				login_text: "#434343",
 				border: "#B6B3C6",
+				modal_text: "#413C6D",
 			},
 		},
 	},
