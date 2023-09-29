@@ -1,9 +1,9 @@
-import logo from "../assets/logo.svg";
-import setting from "../assets/icons/setting.svg";
-import close_pop from "../assets/icons/close-circle.svg"
-import tab from "../assets/icons/tab_pop.svg"
-import camera from "../assets/icons/video-camera.svg"
-import audio from "../assets/icons/audio.svg"
+import logo from "../../assets/logo.svg";
+import setting from "../../assets/icons/setting.svg";
+import close_pop from "../../assets/icons/close-circle.svg"
+import tab from "../../assets/icons/tab_pop.svg"
+import camera from "../../assets/icons/video-camera.svg"
+import audio from "../../assets/icons/audio.svg"
 
 const popup = () => {
 	return (
