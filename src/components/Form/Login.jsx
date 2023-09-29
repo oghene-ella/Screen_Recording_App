@@ -1,11 +1,29 @@
-import facebook from "../../assets/icons/SignUp/Facebook.svg"
-import google from "../../assets/icons/SignUp/Google.svg"
-import or from "../../assets/icons/or.svg"
+import { useState, useEffect } from "react";
+import { auth, googleProvider } from "../../config/firebase.js";
+import { signInWithPopup } from "firebase/auth";
+import Home from "../../pages/Home.jsx";
+
+import facebook from "../../assets/icons/SignUp/Facebook.svg";
+import google from "../../assets/icons/SignUp/Google.svg";
+import or from "../../assets/icons/or.svg";
 
 import SignUp from "./SignUp.jsx";
 
 const Login = () => {
-  return (
+	const [value, setValue] = useState("");
+
+	const signInWithGoogle = () => {
+		signInWithPopup(auth, googleProvider).then((data) => {
+			setValue(data.user.email);
+			localStorage.setItem("email", data.user.email)
+		});
+	}
+
+	useEffect(() => {
+		setValue(localStorage.getItem("email"))
+	}, [])
+
+	return (
 		<section className="h-full flex justify-center">
 			<form className="w-full md:w-1/2 flex flex-col gap-10">
 				{/* signup and login header */}
@@ -20,10 +38,14 @@ const Login = () => {
 				</header>
 
 				{/* login google button */}
-				<button className="border border-dark_black w-full py-3 rounded-lg font-inter font-medium flex gap-4 justify-center">
+				{value?<Home/>:
+				<button
+					className="border border-dark_black w-full py-3 rounded-lg font-inter font-medium flex gap-4 justify-center"
+					onClick={signInWithGoogle}
+				>
 					<img src={google} />
 					Continue with Google
-				</button>
+				</button>}
 
 				{/* login facebook button */}
 				<button className="border border-dark_black w-full py-3 rounded-lg font-inter font-medium flex gap-4 justify-center">
@@ -37,6 +59,6 @@ const Login = () => {
 			</form>
 		</section>
 	);
-}
+};
 
-export default Login
+export default Login;
