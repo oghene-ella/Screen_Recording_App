@@ -1,15 +1,20 @@
-/* eslint-disable react/no-unescaped-entities */
 import one from "../../assets/icons/one.svg"
 import two from "../../assets/icons/two.svg"
 import three from "../../assets/icons/three.svg"
 
 import works_img from "../../assets/icons/how_it_works_img.svg"
 
-const Works = () => {
-  return (
-		<section className="h-fit flex items-center justify-center py-24" id="works" >
+const Works = ({goToHome}) => {
+	return (
+		<section
+			className="h-fit flex items-center justify-center py-24"
+			id="works"
+		>
 			<main className="w-11/12 h-full flex flex-col items-center gap-16">
-				<h1 className="font-semibold text-dark_black font-sora text-4xl">
+				<h1
+					className="font-semibold text-dark_black font-sora text-4xl"
+					onClick={goToHome}
+				>
 					How it works
 				</h1>
 

@@ -17,7 +17,7 @@ const ListDetails = () => {
 				</section>
 
 				<section className="flex flex-col gap-10">
-                    {/* submit and copy url */}
+					{/* submit and copy url */}
 					<section className="flex flex-col md:flex-row gap-5 md:gap-10 ">
 						<span className="bg-send_border opacity-50 flex justify-between w-full md:w-1/2 border border-time_label rounded-lg px-3 py-2 items-center cursor-pointer">
 							<input
@@ -32,24 +32,20 @@ const ListDetails = () => {
 							/>
 						</span>
 
-						<span className="bg-url flex justify-between w-full md:w-1/2 border border-gray-300 rounded-lg px-3 py-2 items-center cursor-pointer">
+						<span className="bg-url flex justify-between w-full md:w-1/2 border border-zinc-200 rounded-lg px-3 py-2 items-center cursor-pointer">
 							<input
 								type="search"
 								placeholder="https://www.helpmeout/Untitled_Video_20232509"
 								className="bg-transparent placeholder:text-url_text font-work_sans text-sm w-4/5 px-1 py-3 font-thin"
 							/>
 							<span className="border border-dark_blue flex gap-3 font-sora text-dark_black text-sm rounded-md cursor-pointer p-2">
-								<img src={copy} className=" w-5"/>
-								<input
-									type="submit"
-									value="Copy URL"
-                                    className="text-sm"
-								/>
+								<img src={copy} className=" w-5" />
+								<input type="submit" value="Copy URL" className="text-sm" />
 							</span>
 						</span>
 					</section>
 
-                    {/* social media buttons */}
+					{/* social media buttons */}
 					<section className="flex flex-col gap-3">
 						<h1 className="font-work_sans text-dark_blue">Share your video</h1>
 

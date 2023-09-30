@@ -4,8 +4,25 @@ import or from "../../assets/icons/or.svg"
 
 import SignUp from "./SignUp.jsx";
 
+import {
+	auth,
+	signInWithRedirect,
+} from "../../config/firebase.js";
+
 const Login = () => {
-  return (
+	// const handleGoogleLogin = () => {
+
+	// 	auth
+	// 		.signInWithRedirect(googleProvider)
+	// 		.then((result) => {
+	// 			console.log("Google Sign-In Successful!", result);
+	// 		})
+	// 		.catch((error) => {
+	// 			console.error("Google Sign-In Error:", error);
+	// 		});
+	// };
+
+	return (
 		<section className="h-full flex justify-center">
 			<form className="w-full md:w-1/2 flex flex-col gap-10">
 				{/* signup and login header */}
@@ -20,7 +37,7 @@ const Login = () => {
 				</header>
 
 				{/* login google button */}
-				<button className="border border-dark_black w-full py-3 rounded-lg font-inter font-medium flex gap-4 justify-center">
+				<button className="border border-dark_black w-full py-3 rounded-lg font-inter font-medium flex gap-4 justify-center" onClick={signInWithRedirect}>
 					<img src={google} />
 					Continue with Google
 				</button>

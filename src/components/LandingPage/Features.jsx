@@ -5,12 +5,16 @@ import revisit from "../../assets/icons/revisit.svg"
 import videoProfile from "../../assets/landingPage/VideoRepository.svg"
 
 
-const Features = () => {
+const Features = ({goToHome}) => {
+
     return (
 			<section className="w-full h-fit flex justify-center py-16" id="features">
 				<main className="w-11/12 h-full justify-center flex flex-col items-center gap-16">
 					<span className="flex flex-col gap-2 items-center">
-						<h1 className="font-sora text-4xl font-semibold text-dark_black">
+						<h1
+							className="font-sora text-4xl font-semibold text-dark_black"
+							onClick={goToHome}
+						>
 							Features
 						</h1>
 						<p className="font-work_sans text-text text-lg">
