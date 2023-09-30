@@ -11,7 +11,7 @@ const popup = () => {
 			<section className="w-1/4 h-fit shadow-xl rounded-3xl p-7 flex flex-col justify-center gap-7">
 				<header className="flex justify-between ">
 					<span className="flex gap-3 items-center font-inter">
-						<a href="/index" className="flex gap-3 items-center ">
+						<a href="/" className="flex gap-3 items-center ">
 							<img src={logo} />
 							<p className="text-dark_blue font-semibold text-base">
 								HelpMeOut
