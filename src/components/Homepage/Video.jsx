@@ -10,8 +10,8 @@ const Video = () => {
 
 				<section className="h-full grid grid-cols-1 md:grid-cols-2 gap-10">
 					<section className="border border-gray-300 rounded-2xl p-4">
-						<span className="relative h-2/3 md:h-1/2">
-							<img src={videoFrame} className="bg-cover" />
+						<span className="relative ">
+							<img src={videoFrame} className="bg-cover w-full" />
 							<p className="rounded-md font-work_sans text-dark_blue absolute bottom-2 right-2 px-5 py-2 bg-time_label bg-cover">
 								00:34
 							</p>
