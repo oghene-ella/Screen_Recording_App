@@ -3,25 +3,25 @@ import google from "../../assets/icons/SignUp/Google.svg"
 import or from "../../assets/icons/or.svg"
 
 import SignUp from "./SignUp.jsx";
-
-import {
-	auth,
-	signInWithRedirect,
-} from "../../config/firebase.js";
+// import {
+// 	firebaseAuthorization,
+// 	googleProvider,
+// } from "../../config/firebase.js";
 
 const Login = () => {
-	// const handleGoogleLogin = () => {
-
-	// 	auth
-	// 		.signInWithRedirect(googleProvider)
-	// 		.then((result) => {
-	// 			console.log("Google Sign-In Successful!", result);
-	// 		})
-	// 		.catch((error) => {
-	// 			console.error("Google Sign-In Error:", error);
-	// 		});
+	// const signInWithGoogle = async (e) => {
+	// 	try {
+	// 		const { target: { name },} = e;
+	// 		let provider;
+	// 		if (name === "google") {
+	// 			provider = new googleProvider();
+	// 		}
+	// 		await firebaseAuthorization(provider);
+	// 	}
+	// 	catch (err) {
+	// 		console.log(err)
+	// 	}
 	// };
-
 	return (
 		<section className="h-full flex justify-center">
 			<form className="w-full md:w-1/2 flex flex-col gap-10">
@@ -37,7 +37,10 @@ const Login = () => {
 				</header>
 
 				{/* login google button */}
-				<button className="border border-dark_black w-full py-3 rounded-lg font-inter font-medium flex gap-4 justify-center" onClick={signInWithRedirect}>
+				<button
+					className="border border-dark_black w-full py-3 rounded-lg font-inter font-medium flex gap-4 justify-center"
+					name="google"
+				>
 					<img src={google} />
 					Continue with Google
 				</button>
