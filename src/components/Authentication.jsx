@@ -40,7 +40,7 @@ const LoginAuthentication = () => {
 					<p className="text-base">{`Logged In as ${authUser.email}`}</p>
 					<button
 						onClick={userSignOut}
-						className="bg-blue-700 text-white px-4 py-2 w-1/2 rounded-lg hover:bg-blue-500"
+						className="bg-dark_blue text-white px-4 py-2 w-1/2 rounded-lg hover:bg-dark_blue hover:opacity-80"
 					>
 						Sign Out
 					</button>

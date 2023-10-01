@@ -4,8 +4,7 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 
 const firebaseConfig = {
-    // apiKey: import.meta.env.VITE_API_KEY,
-    apiKey: "AIzaSyDls9ciYgRQ34I1hEwhcSkRxHKFVtJD9f0",
+    apiKey: import.meta.env.VITE_API_KEY,
     authDomain: "screenrecord-46186.firebaseapp.com",
     projectId: "screenrecord-46186",
     storageBucket: "screenrecord-46186.appspot.com",

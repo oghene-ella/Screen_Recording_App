@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom"
+
 const Account = () => {
   return (
 		<section className="flex justify-center bg-account p-10">
@@ -11,7 +13,7 @@ const Account = () => {
 				</button>
 				<p className="font-sora text-lg text-account_gray flex flex-col sm:flex-row gap-2 font-semibold text-center">
 					Don’t have an account?
-					<a href="/login" className="underline text-dark_blue font-normal cursor-pointer">Create account</a>
+					<Link to="/login" className="underline text-dark_blue font-normal cursor-pointer">Create account</Link>
 				</p>
 			</main>
 		</section>

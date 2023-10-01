@@ -5,17 +5,16 @@ import Video from "../components/Homepage/Video"
 import Authentication from "../components/Authentication"
 
 const HomePage = () => {
-  return (
+	return (
 		<section>
 			<Line />
 			<Header />
 			<Search />
 			<Line />
-            <Video />
+			<Video />
 			<Authentication />
-
 		</section>
 	);
-}
+};
 
 export default HomePage
