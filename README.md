@@ -33,6 +33,9 @@ Create a Chrome Extension plugin that can record a user's screen and send the re
 
 1. Start the server: `npm run dev`
 2. Access the app in your web browser at `http://localhost:5173/`
+3. run - npm run build
+4. go to yout extension tab on any browser
+5. click "load unpack", select the dist folder
 
 ## Contact
 
