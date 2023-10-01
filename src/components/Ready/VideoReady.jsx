@@ -89,7 +89,7 @@ const VideoReady = () => {
 				</section>
 
 				{/* video and transcription */}
-				<section className="border border-t-0 border-r-0 border-b-0  border-zinc-400 w-full md:w-1/2 flex flex-col gap-16">
+				<section className="border border-t-0 border-r-0 border-b-0 border-l-0 md:border-l-2 border-zinc-400 w-full md:w-1/2 flex flex-col gap-16">
           <Video />
 					<Transcription />
 				</section>

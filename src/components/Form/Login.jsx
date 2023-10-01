@@ -1,30 +1,35 @@
-import facebook from "../../assets/icons/SignUp/Facebook.svg"
-import google from "../../assets/icons/SignUp/Google.svg"
-import or from "../../assets/icons/or.svg"
+import facebook from "../../assets/icons/SignUp/Facebook.svg";
+import google from "../../assets/icons/SignUp/Google.svg";
+import or from "../../assets/icons/or.svg";
 
 import SignUp from "./SignUp.jsx";
-// import {
-// 	firebaseAuthorization,
-// 	googleProvider,
-// } from "../../config/firebase.js";
+
+import { auth } from "../../config/firebase.js";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+
 
 const Login = () => {
-	// const signInWithGoogle = async (e) => {
-	// 	try {
-	// 		const { target: { name },} = e;
-	// 		let provider;
-	// 		if (name === "google") {
-	// 			provider = new googleProvider();
-	// 		}
-	// 		await firebaseAuthorization(provider);
-	// 	}
-	// 	catch (err) {
-	// 		console.log(err)
-	// 	}
-	// };
+	const navigate = useNavigate();
+
+	const handleGoogleLogin = () => {
+		const provider = new GoogleAuthProvider();
+		signInWithPopup(auth, provider)
+			.then((result) => {
+				const user = result.user;
+				navigate("/home");
+				console.log("Google Sign-In Successful!", user);
+			})
+			.catch((error) => {
+				navigate("/login");
+				console.error("Google Sign-In Error:", error);
+			});
+			navigate("/login");
+	};
+
 	return (
 		<section className="h-full flex justify-center">
-			<form className="w-full md:w-1/2 flex flex-col gap-10">
+			<div className="w-full md:w-1/2 flex flex-col gap-10">
 				{/* signup and login header */}
 				<header className="flex flex-col gap-5 items-center">
 					<h1 className="font-inter text-3xl md:text-4xl font-semibold text-dark_black">
@@ -39,14 +44,17 @@ const Login = () => {
 				{/* login google button */}
 				<button
 					className="border border-dark_black w-full py-3 rounded-lg font-inter font-medium flex gap-4 justify-center"
-					name="google"
+					onClick={handleGoogleLogin}
 				>
 					<img src={google} />
 					Continue with Google
 				</button>
 
 				{/* login facebook button */}
-				<button className="border border-dark_black w-full py-3 rounded-lg font-inter font-medium flex gap-4 justify-center">
+				<button
+					className="border border-dark_black w-full py-3 rounded-lg font-inter font-medium flex gap-4 justify-center"
+					onClick={() => console.log("jjhg")}
+				>
 					<img src={facebook} />
 					Continue with Facebook
 				</button>
@@ -54,9 +62,9 @@ const Login = () => {
 				<img src={or} />
 
 				<SignUp />
-			</form>
+			</div>
 		</section>
 	);
-}
+};
 
-export default Login
+export default Login;

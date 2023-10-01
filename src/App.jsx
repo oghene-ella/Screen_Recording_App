@@ -7,6 +7,7 @@ import SubHome from "./components/Homepage/SubHome/Index.jsx";
 import Ready from "./pages/Ready.jsx"
 import Features from "./components/LandingPage/Features.jsx";
 import Works from "./components/LandingPage/Works.jsx"
+import RecordSession from "./components/RecordSession.jsx"
 // import NotFound from "./pages/NotFound.jsx";
 
 import { useNavigate } from "react-router-dom";
@@ -23,7 +24,7 @@ const App = () => {
 			<Route path="/" element={<LandingPage />} />
 			<Route path="/features" element={<Features goToHome={goToHome} />} />
 			<Route path="/works" element={<Works goToHome={goToHome} />} />
-
+			<Route path="/record" element={<RecordSession />} />
 			<Route path="/pop" element={<Popup />} />
 			<Route path="/login" exact element={<Login />} />
 			<Route path="/home" exact element={<HomePage />} />

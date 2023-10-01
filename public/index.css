@@ -1,0 +1,161 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+}
+
+.body .inner_section {
+    min-width: 300px;
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.body .inner_section .header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.body .inner_section .header .header_span {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    font-family: "Inter", "sans-serif";
+}
+
+.body .inner_section .header .header_span a {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.body .inner_section .header .header_span a p {
+    color: #120B48;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.body .inner_section .header .close_span {
+    display: flex;
+    gap: 16px;
+}
+
+.body .inner_section p {
+    font-family: "Work Sans", "sans-serif";
+    color: "#413C6D";
+}
+
+.body .inner_section .first_button,
+.body .inner_section .second_button {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid "#120B48";
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 12px;
+    align-items: center;
+    background-color: transparent;
+}
+
+.body .inner_section .first_button span,
+.body .inner_section .second_button span {
+    display: flex;
+    gap: 15px;
+}
+
+.body .inner_section .first_button span p,
+.body .inner_section .second_button span p {
+    font-size: 20px;
+    font-family: "Work Sans", "sans-serif";
+}
+
+.body .inner_section .first_button .switch,
+.body .inner_section .second_button .switch {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 60px;
+    height: 34px;
+}
+
+.body .inner_section .first_button .switch input,
+.body .inner_section .second_button .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.body .inner_section .first_button .switch .slider,
+.body .inner_section .second_button .switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.body .inner_section .first_button .switch .slider:before,
+.body .inner_section .second_button .switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.body .inner_section .first_button .switch input:checked+.slider,
+.body .inner_section .second_button .switch input:checked+.slider {
+    background-color: #120B48;
+}
+
+.body .inner_section .first_button .switch input:focus+.slider,
+.body .inner_section .second_button .switch input:focus+.slider {
+    box-shadow: 0 0 1px #120B48;
+}
+
+.body .inner_section .first_button .switch input:checked+.slider:before,
+.body .inner_section .second_button .switch input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.body .inner_section .first_button .switch .slider.round,
+.body .inner_section .second_button .switch .slider.round {
+    border-radius: 34px;
+}
+
+.body .inner_section .first_button .switch .slider.round:before,
+.body .inner_section .second_button .switch .slider.round:before {
+    border-radius: 50%;
+}
+
+.body .inner_section .third_button {
+    font-family: "Work Sans", "sans-serif";
+    background-color: #120B48;
+    color: white;
+    padding: 4px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    padding-block: 15px;
+}

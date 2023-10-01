@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font family [sors, work sans and inter] -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Sora:wght@400;500&family=Work+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <section class="body">
+        <section class="inner_section">
+            <header class="header">
+                <span class="header_span">
+                    <a href="/">
+                        <img src="assets/logo.svg" />
+                        <p>
+                            HelpMeOut
+                        </p>
+                    </a>
+                </span>
+                <span class="close_span">
+                    <img src="./assets/icons/setting.svg" />
+                    <img src="./assets/icons/close-circle.svg" />
+                </span>
+            </header>
+
+            <p>
+                This extension helps you record and share help videos with ease.
+            </p>
+
+            <img src="./assets/icons/tab_pop.svg" />
+
+            <!-- {/* camera button */} -->
+            <button class="first_button">
+                <span>
+                    <img src="assets/icons/video-camera.svg" />
+                    <p>Camera</p>
+                </span>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </button>
+
+            <!-- {/* audio button */} -->
+            <button class="second_button">
+                <span class="">
+                    <img src="./assets/icons/audio.svg" />
+                    <p className="font-work_sans text-lg">Audio</p>
+                </span>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </button>
+
+            <!-- {/* start recording */} -->
+
+            <button class="third_button" id="start_video">Start Recording</button>
+
+            <button class="third_button" id="stop_video">Stop Recording</button>
+        </section>
+    </section>
+
+    <script src="./popup.js"></script>
+</body>
+
+</html>
