@@ -29,11 +29,9 @@ const RecordSession = () => {
 	};
 
 	return (
-		<section className="w-full flex justify-center items-end">
+		<section className="min-h-screen flex items-end pb-10 pl-5 ">
 			<main
-				className={`border-8 border-zinc-200 w-1/2 h-[7rem] rounded-full bg-dark_black px-5 py-5 text-white flex gap-10 items-center draggable-element ${
-					isDragging ? "dragging" : ""
-				}`}
+				className={` border-8 border-zinc-200 w-fit h-[7rem] rounded-full bg-dark_black px-5 py-5 text-white flex gap-10 items-center ${isDragging ? "dragging" : ""}`}
 				style={{ left: `${position.x}px`, top: `${position.y}px` }}
 				onMouseDown={handleMouseDown}
 			>

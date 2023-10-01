@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-console.log("Hi, I have been injected whoopie!!!");
+console.log("been injected");
 
 var recorder = null;
 function onAccessApproved(stream) {
@@ -9,7 +9,7 @@ function onAccessApproved(stream) {
 
 	recorder.onstop = function () {
 		stream.getTracks().forEach(function (track) {
-			if (track.readyState === "live") {
+			if (track.readyState === "Live") {
 				track.stop();
 			}
 		});
@@ -17,13 +17,37 @@ function onAccessApproved(stream) {
 
 	recorder.ondataavailable = function (event) {
 		let recordedBlob = event.data;
+		var formdata = new FormData();
+		formdata.append(
+			"video",
+			recordedBlob,
+			"https://amara-hngtask-chrome-extension.onrender.com/api/upload",
+		);
+
 		let url = URL.createObjectURL(recordedBlob);
+		console.log(url);
 
+		// STUFFS I JUST ADDED
+		var requestOptions = {
+			method: "POST",
+			body: formdata,
+			redirect: "follow",
+		};
+
+		fetch(
+			"https://amara-hngtask-chrome-extension.onrender.com/api/upload",
+			requestOptions,
+		)
+			.then((response) => response.text())
+			.then((result) => console.log(result))
+			.catch((error) => console.log("error", error));
+
+		// LINK
 		let a = document.createElement("a");
-
 		a.style.display = "none";
 		a.href = url;
-		a.download = "screen-recording.webm";
+		a.download = `${url}.mp4`;
+		a.target = "_blank";
 
 		document.body.appendChild(a);
 		a.click();
@@ -31,6 +55,7 @@ function onAccessApproved(stream) {
 		document.body.removeChild(a);
 
 		URL.revokeObjectURL(url);
+		window.location.assign("https://ellahhh-helpmeout.netlify.app/ready");
 	};
 }
 
@@ -38,7 +63,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	if (message.action === "request_recording") {
 		console.log("requesting recording");
 
-		sendResponse(`processed: ${message.action}`);
+		sendResponse(`seen ${message.action}`);
 
 		navigator.mediaDevices
 			.getDisplayMedia({
@@ -53,9 +78,9 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 			});
 	}
 
-	if (message.action === "stopvideo") {
+	if (message.action === "stopVideo") {
 		console.log("stopping video");
-		sendResponse(`processed: ${message.action}`);
+		sendResponse(`seen ${message.action}`);
 		if (!recorder) return console.log("no recorder");
 
 		recorder.stop();
