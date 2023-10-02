@@ -32,10 +32,13 @@ Create a Chrome Extension plugin that can record a user's screen and send the re
 ## Usage
 
 1. Start the server: `npm run dev`
-2. Access the app in your web browser at `http://localhost:5173/`
-3. run - npm run build
-4. go to your extension tab on any browser
-5. click "load unpack", select the dist folder
+
+## Extension Usage
+1. Click on the `helpMeout` Button
+2. download the `dist` folder
+3. Go to your extension tab on any browser, Click `manage extension`
+4. Click `load unpack`, select the dist folder you just downloaded.
+5. You will see it on your list of extension, Enjoy! 🙂
 
 ## Contact
 
