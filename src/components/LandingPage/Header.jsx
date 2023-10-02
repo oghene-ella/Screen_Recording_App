@@ -14,8 +14,10 @@ const Header = () => {
 							how to get things done on a website.
 						</p>
 						<a
-							href="/"
+							href="https://drive.google.com/drive/folders/1D51P7_LVTv_BDP2B806SaQLGil8MnSoI?usp=drive_link"
 							className="bg-dark_blue text-white w-fit flex gap-3 px-5 py-4 rounded-md"
+							target="_blank"
+							rel="noreferrer"
 						>
 							Install HelpMeOut
 							<img src={arrowIcon} className="w-4" />
